@@ -1,7 +1,7 @@
 ///
 /// \file src/ESeries.h
-/// \date 30.11.2016
-/// \author Michael Trummer
+/// \date 10.11.2020
+/// \author Timo Wey, Patrick Jansky und Joel Fuchs
 ///
 
 #ifndef ESERIES_H
@@ -12,14 +12,15 @@
 #include "IESeries.h"
 
 ///
-/// \brief The ESeries class represents the E resistor series E12 and E24. If
-/// more E resistor series are required, this class can be appended.
+/// \brief Die ESerie-Klasse repräsentiert die E-Widerstandsreihen E12 und E24. 
+/// Wenn mehr E-Widerstandsreihen erforderlich sind, kann diese Klasse 
+/// angehängt werden.
 ///
 class ESeries : public IESeries {
  public:
   ///
-  /// \brief ESeries Ctor
-  /// \param serie defines which
+  /// \brief ESerie Ctor
+  /// \param serie definiert welche
   ///
   ESeries(IESeries::SeriesType serie) : type(serie)
   {
@@ -40,9 +41,9 @@ class ESeries : public IESeries {
   }
 
   ///
-  /// \brief getElemCnt function returns the count of desired E series. E.g. an
-  /// object generated as E12 object returns 12.
-  /// \return count of elements in represented E series
+  /// \brief Die Funktion getElemCnt gibt die Anzahl der gewünschten E-Serien zurück. 
+  /// Zum Beispiel ein als E12-Objekt generiertes Objekt gibt 12 zurück.
+  /// \return Anzahl der Elemente in der dargestellten E-Reihe
   ///
   unsigned int getElemCnt() const
   {
@@ -50,8 +51,8 @@ class ESeries : public IESeries {
   }
 
   ///
-  /// \brief getName function returns the string of the desired E series. E.g.
-  /// "E12" for an E12 serie.
+  /// \brief Die Funktion getName gibt die Zeichenfolge der gewünschten E-Serie zurück.
+  ///  Zum Beispiel "E12" für eine E12-Serie.
   /// \return
   ///
   std::string getName() const
@@ -60,12 +61,12 @@ class ESeries : public IESeries {
   }
 
   ///
-  /// \brief operator [] to get an element of the serie with an index.
-  /// \pre index < size of serie (element count)
-  /// \pre index >= 0
-  /// \param index of the element to be returned
-  /// \return the element that at the index position in the serie represented
-  ///         by the object
+  /// \brief Operator [], um ein Element der Serie mit einem Index auszulesen
+  /// \pre Index < Größe der Serie (Anzahl der Elemente)
+  /// \pre Index >= 0
+  /// \param Index des zurückzugebenden Elements
+  /// \return das Element, das sich an der Indexposition in der vom Objekt dargestellten
+  ///         Serie befindet.
   ///
   double operator[](int index) const
   {

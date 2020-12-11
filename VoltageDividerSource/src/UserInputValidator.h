@@ -1,7 +1,7 @@
 ///
 /// \file UserInputValidator.h
-/// \date 30.11.2016
-/// \author Michael Trummer
+/// \date 10.12.2020
+/// \author Timo Wey, Patrick Jansky und Joel Fuchs
 ///
 
 #ifndef USERINPUTVALIDATOR_H
@@ -10,39 +10,39 @@
 #include <QValidator>
 
 ///
-/// \brief The UserInputValidator class
+/// \brief Die UserInputValidator Klasse
 ///
 class UserInputValidator : public QValidator
 {
 public:
     ///
-    /// \brief UserInputValidator used to convert an input string into a double
-    ///       and verifies if the convertion was valid.
-    /// \param[in] unit string that contains which unit should be removed/parsed.
-    ///       For example "V" or "Ohm".
+    /// \brief UserInputValidator wird verwendet, um eine Eingabezeichenfolge in ein
+    ///        double zu konvertieren und zu überprüfen, ob die Konvertierung gültig war.
+    /// \param[in] unit string beinhaltet units, welche entfernt / analysiert 
+    ///       werden soll. Zum Beispiel "V" oder "Ohm".
     /// \param[in,out] parent QObject
     ///
     UserInputValidator(const QString& unit, QObject* parent=0);
 
     ///
-    /// \brief This virtual function returns Invalid if input is invalid
-    /// according to this validator's rules, Intermediate if it is  likely
-    /// that a little more editing will make the input acceptable (e.g. the user
-    /// types "4" into a widget which accepts integers between 10 and 99),
-    /// and Acceptable if the input is valid.
+    /// \brief Diese virtuelle Funktion gibt ungültig zurück, wenn die Eingabe 
+    /// gemäss den Regeln dieses Validators ungültig ist. Mittelwert, wenn es 
+    /// wahrscheinlich ist, dass etwas mehr Bearbeitung, die Eingabe akzeptabel macht 
+    /// (z.B. gibt der Benutzer "4" in ein Widget ein, das Ganzzahlen zwischen 10 und 99 akzeptiert) 
+    /// und Akzeptabel, wenn die Eingabe gültig ist
     ///
-    /// The function can change both input and pos (the cursor position)
-    /// if required.
-    /// \param input string to be converted
-    /// \param pos not used in this context
-    /// \return State if convertion was Invalid, Intermediate, or Acceptable.
+    /// Die Funktion kann bei Bedarf sowohl die Eingabe als auch die Position
+    /// (die Cursorposition) ändern.
+    /// \param intput Zeichenkette, die konvertiert werden soll.
+    /// \param pos wird in diesem Zusammenhang nicht verwendet.
+    /// \return State, wenn die Konvertierung ungültig, mittelmässig oder akzeptabel war.
     ///
     virtual State validate(QString &input, int &pos) const;
 
     ///
-    /// \brief getValue of the last checked input. Check \ref getIsValid first
-    ///        to be sure the return value of this getter is valid.
-    /// \return the value of the last converted input as double
+    /// \brief getValue der zuletzt überprüften Eingabe. Überprüft zuerst \ ref getIsValid, 
+    /// um sicherzustellen, dass der Rückgabewert dieses Getters gültig ist.
+    /// \return Der Wert der zuletzt konvertierten Eingabe ist ein double.
     ///
     double getValue() const
     {
@@ -50,10 +50,10 @@ public:
     }
 
     ///
-    /// \brief getIsValid return true if the last converted input string was
-    ///        successfully converted into double data type. The corresponding
-    ///        value can be retrieved with the \ref getValue method.
-    /// \return returns true if the last converted input string value was valid.
+    /// \brief getIsValid gibt true zurück, wenn die zuletzt konvertierte Eingabezeichenfolge 
+    ///        erfolgreich in einen double-Datentyp konvertiert wurde. Der entsprechende 
+    ///        Wert kann mit der Methode \ ref getValue abgerufen werden.
+    /// \return Gibt true zurück, wenn der zuletzt konvertierte Eingabezeichenfolgenwert gültig war.
     ///
     bool getIsValid() const
     {

@@ -5,16 +5,15 @@
 #include "IESeries.h"
 
 ///
-/// \brief An Object of the EResistor class represents a resistor of the
-/// corresponding E series passed in Ctor.
-/// series.
+/// \brief Ein Objekt der EResistor Klasse steht für einen Widerstand der
+///  entsprechenden E-Serie in Ctor.
 ///
 class EResistor {
  public:
   ///
-  /// \brief The AssignMethod enum is used as argument in Ctor. It defines
-  /// whether the nearest E series value representant is search below or above a
-  /// given value.
+  /// \brief Das enum AssignMethod wird in Ctor als Argument verwendet. 
+  /// Es definiert, ob der nächste Werterepräsentant der E-Serie unter oder über 
+  /// einem bestimmten Wert gesucht wird.
   ///
   enum AssignMethod
   {
@@ -24,19 +23,19 @@ class EResistor {
 
   ///
   /// \brief EResistor Ctor
-  /// \param value for this value a representant will be searched in the
-  /// corresponding serieType E-Serie
-  /// \param method defines wheter the representant is search above the passed
-  /// value oder below.
-  /// \param serie is used to define which E series should be used to search the
-  /// representant.
+  /// \param value für diesen Wert wird ein Repräsentant in der 
+  /// entsprechenden serieType E-Serie gesucht.
+  /// \param method definiert, ob der Repräsentant über dem zugewiesenen Wert
+  /// oder darunter sucht.
+  /// \param serie wird definiert, welche E-Serie zur Suche nach dem Repräsentanten 
+  /// verwendet werden soll.
   ///
   EResistor(double value, AssignMethod method, const IESeries& serie);
 
   ///
-  /// \brief operator <
-  /// \param rhs object on the right hand side
-  /// \return true if the value of the lhs object is smaller.
+  /// \brief Operator <
+  /// \param rhs Objekt auf der rechten Seite
+  /// \return true, wenn der Wert des lhs-Objekts kleiner ist
   ///
   bool operator<(const EResistor& rhs) const
   {
@@ -44,10 +43,10 @@ class EResistor {
   }
 
   ///
-  /// \brief operator <=
-  /// \param rhs object on the right hand side
-  /// \return true if the value of the lhs object is smaller or equal than the
-  /// rhs.
+  /// \brief Operator <=
+  /// \param rhs Objekt auf der rechten Seite
+  /// \return true, wenn der Wert des lhs-Objekts kleiner oder gleich dem 
+  /// rhs ist
   ///
   bool operator<=(const EResistor& rhs) const
   {
@@ -55,10 +54,10 @@ class EResistor {
   }
 
   ///
-  /// \brief operator >
-  /// \param rhs object on the right hand side
-  /// \return true if the value of the lhs object is greater than the
-  /// rhs object.
+  /// \brief Operator >
+  /// \param rhs Objekt auf der rechten Seite
+  /// \return true, wenn der Wert des lhs-Objekts grösser als der des 
+  ///         rhs-Objekts ist
   ///
   bool operator>(const EResistor& rhs) const
   {
@@ -66,10 +65,10 @@ class EResistor {
   }
 
   ///
-  /// \brief operator >=
-  /// \param rhs object on the right hand side
-  /// \return true if the value of the lhs object is greater or equal than the
-  /// rhs object.
+  /// \brief Operator >=
+  /// \param rhs Objekt auf der rechten Seite
+  /// \return true, wenn der Wert des lhs-Objekts grösser oder gleich dem 
+  /// rhs-Objekt ist
   ///
   bool operator>=(const EResistor& rhs) const
   {
@@ -77,10 +76,10 @@ class EResistor {
   }
 
   ///
-  /// \brief operator ++ increments the resistor value. The next value in the
-  /// corresponding E serie is choosen. If an E serie overflow occurs for the
-  /// next value, the exponent of the value is incremented too.
-  /// \return the incremented representant
+  /// \brief Operator ++ erhöht den Widerstandswert. Der nächste Wert in der
+  /// entsprechenden E-Serie wird ausgewählt. Wenn für den nächsten Wert ein 
+  /// Überlauf der E-Serie auftritt, wird auch der Exponent des Werts erhöht.
+  /// \return der inkrementierte Repräsentant
   ///
   const EResistor& operator++()
   {
@@ -93,9 +92,9 @@ class EResistor {
   }
 
   ///
-  /// \brief operator +
-  /// \param rhs object on the right hand side
-  /// \return the sum of the rhs value and the lhs value as double type.
+  /// \brief Operator +
+  /// \param rhs Objekt auf der rechten Seite
+  /// \return die Summe aus dem rhs-Wert und dem lhs-Wert als double Typ
   ///
   double operator+(const EResistor& rhs)
   {
@@ -105,9 +104,9 @@ class EResistor {
   }
 
   ///
-  /// \brief operator *
-  /// \param rhs object on the right hand side
-  /// \return the product of the rhs value and the lhs value as double type.
+  /// \brief Operator *
+  /// \param rhs Objekt auf der rechten Seite
+  /// \return das Produkt aus dem rhs-Wert und dem lhs-Wert als double Typ
   ///
   double operator*(const EResistor& rhs)
   {
@@ -117,7 +116,7 @@ class EResistor {
   }
 
   ///
-  /// \brief operator double for type convertion from EResistor to double
+  /// \brief Operator double für die Typkonvertierung von EResistor nach double
   ///
   operator double() const
   {
@@ -126,7 +125,7 @@ class EResistor {
 
   ///
   /// \brief getValue
-  /// \return the actual value of the resistor
+  /// \return der tatsächliche Wert des Widerstands
   ///
   double getValue() const
   {
@@ -134,8 +133,8 @@ class EResistor {
   }
 
   ///
-  /// \brief getSerie getter method
-  /// \return the corresponding E-Serie
+  /// \brief getSerie getter Methode
+  /// \return die entsprechende E-Serie
   ///
   const IESeries& getSerie() const
   {

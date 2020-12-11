@@ -1,7 +1,7 @@
 ///
 /// \file src/VoltageDivider.h
-/// \date 30.11.2016
-/// \author Michael Trummer
+/// \date 10.12.2020
+/// \author Timo Wey, Patrick Jansky und Joel Fuchs
 ///
 
 #ifndef VOLTAGEDIVIDER_H
@@ -13,38 +13,38 @@
 #include "EResistor.h"
 
 ///
-/// \brief The VoltageDivider class
+/// \brief Die VoltageDivider Klasse
 ///
 class VoltageDivider {
  public:
   ///
-  /// \brief The ResultingResistors struct
+  /// \brief Die ResultingResistors Struktur
   ///
   struct ResultingResistors
   {
     ///
-    /// \brief r1 represents the upper resistor in an unloaded voltage divider
+    /// \brief r1 repräsentiert den oberen Widerstand in einem unbelasteten Spannungsteiler
     ///
     double r1;
     ///
-    /// \brief r2 represents the lower resistor in an unloaded voltage divider
+    /// \brief r2 repräsentiert den unteren Widerstand in einem unbelasteten Spannungsteiler
     ///
     double r2;
   };
 
   ///
-  /// \brief Calculates the optimal values for R1 and R2. The base formula
-  ///        behind this calculation is \f$u1=u2 {r2 \over r2+r1}\f$.
+  /// \brief Berechnet die optimalen Werte für r1 und r2. Die Grundformel
+  /// hinter dieser Berechnung steht \ f $ u1 = u2 {r2 \ über r2 + r1} \ f $.
   /// \pre \p u1 > \p u2
   /// \pre \p u2 > 0
   /// \pre \p lowerRTh < \p upperRTh
   /// \pre \p lowerRTh > 0
-  /// \param u1 Value for U1 in V
-  /// \param u2 Value for U2 in V
-  /// \param lowerRTh set the lower bound for resistor value output
-  /// \param upperRTh set the higher bound for resistor value output
-  /// \return returns the resulting restistor values if calculation finishes
-  ///         successful. Otherwise 0 is returned in r1 and r2.
+  /// \param u1 Wert für U1 in V
+  /// \param u2 Wert für U2 in V
+  /// \param lowerRTh legt die Untergrenze für die Widerstandswertausgabe fest
+  /// \param upperRTh legt die Obergrenze für die Widerstandswertausgabe fest
+  /// \return Gibt die resultierenden Widerstandswerte zurück, wenn die Berechnung 
+  ///         erfolgreich abgeschlossen wurde. Andernfalls wird 0 in r1 und r2 zurückgegeben.
   ///
   static ResultingResistors calc(double u1, double u2,
                                  const EResistor& lowerRTh,
@@ -90,8 +90,8 @@ class VoltageDivider {
 
  private:
   ///
-  /// \brief VoltageDivider Ctor is private to restrict any instantiation of
-  /// this class.
+  /// \brief VoltageDivider Ctor ist privat, um die Instanziierung dieser Klasse 
+  /// einzuschränken..
   ///
   VoltageDivider()
   {

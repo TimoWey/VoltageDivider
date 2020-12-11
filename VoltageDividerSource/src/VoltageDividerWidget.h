@@ -1,7 +1,7 @@
 ///
 /// \file VoltageDividerWidget.h
-/// \date 30.11.2016
-/// \author Michael Trummer
+/// \date 10.12.2020
+/// \author Timo Wey, Patrick Jansky und Joel Fuchs
 ///
 
 #ifndef FORM_H
@@ -18,10 +18,10 @@ class Form;
 }
 
 ///
-/// \brief The VoltageDividerWidget class represents a widget with integrated
-///        sub widgets for input and output. It uses the VoltageDivider class
-///        to determine the output resistors in addiction to the voltage input
-///        values.
+/// \brief Die VoltageDividerWidget-Klasse repräsentiert ein Widget mit integrierten 
+/// Unter-Widgets für die Ein- und Ausgabe. Es verwendet die VoltageDivider-Klasse, 
+/// um die Ausgangswiderstände in Abhängigkeit von den Spannungseingangswerten zu 
+/// bestimmen.
 ///
 class VoltageDividerWidget : public QWidget {
   Q_OBJECT
@@ -29,23 +29,23 @@ class VoltageDividerWidget : public QWidget {
  public:
   ///
   /// \brief VoltageDividerWidget
-  /// \param[in,out] parent QObject for an object of VoltageDividerWidget
+  /// \param[in,out] parent QObject für ein Objekt von VoltageDividerWidget
   ///
   explicit VoltageDividerWidget(QWidget *parent = 0);
 
   ///
-  /// \brief Destructor
+  /// \brief Destruktor
   ///
   ~VoltageDividerWidget();
 
  public slots:
   ///
-  /// \brief Calling this slot cause the GUI to update R1 and R2 value
-  /// with given values. The function append a 10base Unit like k and the "Ohm"
-  /// unit.
+  /// \brief Beim Aufrufen dieses Steckplatzes, aktualisiert die GUI die Werte 
+  /// für r1 und r2 mit den angegebenen Werten. Die Funktion hängt eine 10-Basis-Einheit 
+  /// wie k und die "Ohm" -Einheit an.
   ///
-  /// \param r1 Value of first Resistor in Ohm
-  /// \param r2 Value of second Resistor in Ohm
+  /// \param r1 ist der Wert des ersten Widerstands in Ohm
+  /// \param r2 ist der Wert des zweiten Widerstands in Ohm
   ///
   void onResultRefresh(double r1, double r2);
 
