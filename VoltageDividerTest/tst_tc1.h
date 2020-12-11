@@ -64,6 +64,11 @@ TEST(VoltageDividerTest, tc1)
   s = "10fOhm";
   o->validate(s, pos);
   EXPECT_EQ(o->getIsValid(), 0);
+
+  // Random other check
+  s = "x";
+  o->validate(s, pos);
+  EXPECT_EQ(o->getIsValid(), 0);
 }
 
 #endif  // TST_TC1_H
