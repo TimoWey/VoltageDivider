@@ -8,6 +8,7 @@
 /// \brief Ein Objekt der EResistor Klasse steht für einen Widerstand der
 ///  entsprechenden E-Serie in Ctor.
 ///
+
 class EResistor {
  public:
   ///
