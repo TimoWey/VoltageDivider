@@ -4,6 +4,7 @@
 /// \author Michael Trummer
 ///
 
+
 #include <QApplication>
 #include "VoltageDividerWidget.h"
 #include "VoltageDivider.h"
