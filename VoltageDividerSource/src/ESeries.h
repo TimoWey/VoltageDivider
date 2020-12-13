@@ -11,6 +11,7 @@
 #include <cassert>
 #include "IESeries.h"
 
+
 ///
 /// \brief Die ESerie-Klasse repräsentiert die E-Widerstandsreihen E12 und E24. 
 /// Wenn mehr E-Widerstandsreihen erforderlich sind, kann diese Klasse 
