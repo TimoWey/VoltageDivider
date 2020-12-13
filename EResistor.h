@@ -1,8 +1,10 @@
 #ifndef ERESISTOR_H
 #define ERESISTOR_H
 
+
 #include <cmath>
 #include "IESeries.h"
+
 
 ///
 /// \brief An Object of the EResistor class represents a resistor of the
