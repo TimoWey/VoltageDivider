@@ -8,6 +8,7 @@
 #include "VoltageDividerWidget.h"
 #include "VoltageDivider.h"
 
+
 int main(int argc, char *argv[])
 {
   QApplication a(argc, argv);
