@@ -12,6 +12,7 @@
 #include <cassert>
 #include "EResistor.h"
 
+
 ///
 /// \brief The VoltageDivider class
 ///
