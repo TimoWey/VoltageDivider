@@ -15,6 +15,7 @@ EResistor::EResistor(double value, AssignMethod method, const IESeries& eSerie)
   }
 }
 
+
 void EResistor::setLowerOrEqValue(double value)
 {
   assert(0 < value);
