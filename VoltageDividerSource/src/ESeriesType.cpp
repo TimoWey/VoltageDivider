@@ -13,3 +13,4 @@ IESeries::SeriesType& operator++(IESeries::SeriesType& serie)
   }
   return serie;
 }
+
