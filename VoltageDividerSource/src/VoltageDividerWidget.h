@@ -17,7 +17,7 @@ namespace Ui
 class Form;
 }
 
-///
+/// 
 /// \brief Die VoltageDividerWidget-Klasse repräsentiert ein Widget mit integrierten 
 /// Unter-Widgets für die Ein- und Ausgabe. Es verwendet die VoltageDivider-Klasse, 
 /// um die Ausgangswiderstände in Abhängigkeit von den Spannungseingangswerten zu 
