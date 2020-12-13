@@ -4,6 +4,7 @@
 /// \author Michael Trummer
 ///
 
+
 #include "VoltageDivider.h"
 #include <cassert>
 #include <cmath>
